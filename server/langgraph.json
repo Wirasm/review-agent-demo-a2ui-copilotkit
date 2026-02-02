@@ -1,0 +1,9 @@
+{
+  "python_version": "3.12",
+  "dependencies": ["."],
+  "package_manager": "uv",
+  "graphs": {
+    "review_agent": "./review_agent/graph.py:graph"
+  },
+  "env": ".env"
+}
