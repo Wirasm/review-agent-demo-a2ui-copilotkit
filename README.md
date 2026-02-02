@@ -27,11 +27,17 @@ An AI-powered GitHub PR code review agent built with CopilotKit and LangGraph. P
 
 ### Environment Variables
 
-Create `.env` at the project root:
+**Server** — create `server/.env`:
 
 ```
-GITHUB_TOKEN=ghp_...
 OPENAI_API_KEY=sk-...
+GITHUB_TOKEN=ghp_...
+```
+
+**Client** — create `client/.env.local`:
+
+```
+LANGGRAPH_DEPLOYMENT_URL=http://localhost:8123
 ```
 
 ### Install & Run
