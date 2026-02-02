@@ -16,22 +16,22 @@ const SEVERITY_STYLES: Record<
 > = {
   critical: {
     border: "border-l-red-500",
-    badge: "bg-red-100 text-red-800",
+    badge: "bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300",
     label: "Critical",
   },
   warning: {
     border: "border-l-yellow-500",
-    badge: "bg-yellow-100 text-yellow-800",
+    badge: "bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-300",
     label: "Warning",
   },
   info: {
     border: "border-l-blue-500",
-    badge: "bg-blue-100 text-blue-800",
+    badge: "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300",
     label: "Info",
   },
   suggestion: {
     border: "border-l-green-500",
-    badge: "bg-green-100 text-green-800",
+    badge: "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300",
     label: "Suggestion",
   },
 };
@@ -49,7 +49,7 @@ export function FindingCard({
 
   return (
     <div
-      className={`rounded-lg border border-gray-200 border-l-4 bg-white p-4 shadow-sm ${style.border}`}
+      className={`rounded-xl border border-gray-200 border-l-4 bg-white p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800 ${style.border}`}
     >
       <div className="mb-2 flex items-center gap-2">
         <span
@@ -57,21 +57,29 @@ export function FindingCard({
         >
           {style.label}
         </span>
-        <span className="font-medium text-gray-900">{title}</span>
+        <span className="font-medium text-gray-900 dark:text-gray-100">
+          {title}
+        </span>
       </div>
-      <p className="mb-1 text-xs text-gray-500">
+      <p className="mb-1 text-xs text-gray-500 dark:text-gray-400">
         {file}:{line}
       </p>
-      <p className="mb-3 text-sm text-gray-700">{description}</p>
+      <p className="mb-3 text-sm text-gray-700 dark:text-gray-300">
+        {description}
+      </p>
       {codeSnippet && (
-        <pre className="mb-3 overflow-x-auto rounded bg-gray-50 p-3 text-xs text-gray-800">
+        <pre className="mb-3 overflow-x-auto rounded-lg bg-gray-50 p-3 text-xs text-gray-800 dark:bg-gray-900 dark:text-gray-200">
           <code>{codeSnippet}</code>
         </pre>
       )}
       {suggestion && (
-        <div className="rounded border border-green-200 bg-green-50 p-2">
-          <p className="text-xs font-medium text-green-800">Suggestion</p>
-          <p className="text-sm text-green-700">{suggestion}</p>
+        <div className="rounded-lg border border-green-200 bg-green-50 p-2 dark:border-green-800 dark:bg-green-900/20">
+          <p className="text-xs font-medium text-green-800 dark:text-green-300">
+            Suggestion
+          </p>
+          <p className="text-sm text-green-700 dark:text-green-400">
+            {suggestion}
+          </p>
         </div>
       )}
     </div>

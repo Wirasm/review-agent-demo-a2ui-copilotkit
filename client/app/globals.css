@@ -1,1 +1,23 @@
 @import "tailwindcss";
+
+:root {
+  --copilot-kit-primary-color: rgb(99 102 241);
+  --copilot-kit-contrast-color: #fff;
+  --copilot-kit-background-color: rgb(249 250 251);
+  --copilot-kit-input-background-color: #fff;
+  --copilot-kit-secondary-color: #fff;
+  --copilot-kit-secondary-contrast-color: rgb(17 24 39);
+  --copilot-kit-separator-color: rgb(229 231 235);
+  --copilot-kit-muted-color: rgb(229 231 235);
+}
+
+html.dark {
+  --copilot-kit-primary-color: rgb(129 140 248);
+  --copilot-kit-contrast-color: rgb(31 41 55);
+  --copilot-kit-background-color: rgb(31 41 55);
+  --copilot-kit-input-background-color: rgb(55 65 81);
+  --copilot-kit-secondary-color: rgb(31 41 55);
+  --copilot-kit-secondary-contrast-color: rgb(243 244 246);
+  --copilot-kit-separator-color: rgb(55 65 81);
+  --copilot-kit-muted-color: rgb(75 85 99);
+}
