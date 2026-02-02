@@ -21,3 +21,6 @@ server/.env
 
 # Bun
 bun.lockb
+
+# LangGraph runtime cache
+server/.langgraph_api/
